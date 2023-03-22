@@ -32,45 +32,52 @@ Would you like to fish this season?
 
 (set: $fishPopulation to it -3)
 (set: $money to it + 1000)
-(if:$fishPopulation &lt; -4)[ [[MASS EXTINCTION]] ]
-(else:) [ [[End fishing period|Results]]]</tw-passagedata><tw-passagedata pid="4" name="Fish a little" tags="" position="575,1075" size="100,100">You didn&#39;t catch a lot of fish in the end. You hope that in the future the fish population is more stable. 
+(if:$fishPopulation &lt; -4)[ [[End fishing period|MASS EXTINCTION]] ]
+(else:) [ [[End fishing period|Results]]]</tw-passagedata><tw-passagedata pid="4" name="Fish a little" tags="" position="600,1125" size="100,100">You didn&#39;t catch a lot of fish in the end. You hope that in the future the fish population is more stable. 
 
 (set: $fishPopulation to it +2)
 (set: $hunger to it +1)
 (set: $money to it + 250)
-[ [[End fishing period|Results]] ]</tw-passagedata><tw-passagedata pid="5" name="MASS EXTINCTION" tags="" position="50,1100" size="100,100">After a whole day of fishing, you barely have any fish to bring back.</tw-passagedata><tw-passagedata pid="6" name="Results" tags="" position="225,1175" size="100,100">It is time to end the fishing period and wait for another one. 
-(set: $money to it - 600)
-(if: $money &lt; 0) [ [[Family State (Bad):]] ]
-After expenses costing 600 dollars, you are left with $money dollars in your bank account
+[ [[End fishing period|Results]] ]</tw-passagedata><tw-passagedata pid="5" name="MASS EXTINCTION" tags="" position="100,875" size="100,100">The fish population has almost died out. They were not given a chance to repopulate and any effort to catch them currently will just result in a loss.
 
-[[Next Period|Continue Job]]</tw-passagedata><tw-passagedata pid="7" name="No" tags="" position="925,425" size="100,100">No? Why not?
+A few months pass, and you are forced to sell your home and what little property you had to begin with. Surviving begins to become a struggle as you are forced to work quick
+on and off jobs. Practically being homeless, your wife along with your son leaves you struggling to survive, pondering the rest of your life. However, the aquatic wildlife remain
+somewhat stable. Marine biologists predict that fish populations will begin to decline in the upcoming decades.
+</tw-passagedata><tw-passagedata pid="6" name="Results" tags="" position="225,1175" size="100,100">It is time to end the fishing period and wait for another one. 
+(set: $money to it - 450)
+(if: $money &lt; 0) [ [[Family State (Bad):]] ]
+(else:)
+[After expenses costing 450 dollars, you are left with $money dollars in your bank account
+[[Next Period|Continue Job]]]</tw-passagedata><tw-passagedata pid="7" name="No" tags="" position="950,375" size="100,100">No? Why not?
 
 [[The fish are less prominent this year. | Var.1]]
-[[I would be wasting company resources to go out this season.| Var.2]]
-[[Family going on vacation.| Var.3]]</tw-passagedata><tw-passagedata pid="8" name=" Var.1" tags="" position="1175,150" size="100,100">You know what else is less prominent? YOUR EMPLOYMENT!!
+[[I would be wasting company resources to go out this season.|Get fired]]
+[[Family going on vacation.| Var.3]]</tw-passagedata><tw-passagedata pid="8" name=" Var.1" tags="" position="1200,200" size="100,100">You know what else is less prominent? YOUR EMPLOYMENT!!
 
-[[Quit |Family State (Bad):]]</tw-passagedata><tw-passagedata pid="9" name=" Var.2" tags="" position="1125,400" size="100,100">(if: $hasSaidNo is false) [ [[First warning]]]
-(else-if: $hasSaidNo is true) [ [[Get fired]]]
- </tw-passagedata><tw-passagedata pid="10" name=" Var.3" tags="" position="1125,675" size="100,100">Have you seriously came all this way just to tell me that? FEEL FREE TO TAKE THAT VACATION FOR AS LONG AS YOU WANT. YOUR DONE!
+[[Quit |Family State (Bad):]]</tw-passagedata><tw-passagedata pid="9" name=" Var.3" tags="" position="1125,675" size="100,100">Have you seriously came all this way just to tell me that? FEEL FREE TO TAKE THAT VACATION FOR AS LONG AS YOU WANT. YOUR DONE!
 
-[[Quit |Family State (Bad):]]</tw-passagedata><tw-passagedata pid="11" name="Yes " tags="" position="575,425" size="100,100">You set sail one very early morning. The freezing cold ocean air making every skin to metal contact point on the ship feel as numb and frigid as a corpse. The thick fog
+[[Quit |Family State (Bad):]]</tw-passagedata><tw-passagedata pid="10" name="Yes " tags="" position="575,425" size="100,100">You set sail one very early morning. The freezing cold ocean air making every skin to metal contact point on the ship feel as numb and frigid as a corpse. The thick fog
 clouding the shallow water, slowly increasing in thickness as the boat reaches closer and closer to the all too familiar fishing grounds.
 
 Do you choose to fish Purse Seine? (Traditional mass commercial net fishing)
 or
-Briefly trawl on the water (Dangle a net behind the boat, another commercial fishing method that yields fewer fish but is less likely to trap other unwanted species)</tw-passagedata><tw-passagedata pid="12" name="Family State (Good):" tags="" position="1700,700" size="100,100">Years pass and as far as the perspective of your families well-being, you are doing great! Your daughter is now fortunate enough to seek a good education, and you and your wives relationship
+Briefly trawl on the water (Dangle a net behind the boat, another commercial fishing method that yields fewer fish but is less likely to trap other unwanted species)</tw-passagedata><tw-passagedata pid="11" name="Family State (Good):" tags="" position="1875,650" size="100,100">Years pass and as far as the perspective of your families well-being, you are doing great! Your daughter is now fortunate enough to seek a good education, and you and your wives relationship
 remains stable and happy! However, due to overfishing primarily ones funded by big food corporations have led to the inevitable death of coral reefs, the extinction of numerous 
-aquatic wildlife and extreme levels of pollution across the Indian Ocean. At least you can retire soon!</tw-passagedata><tw-passagedata pid="13" name="Family State (Mid):" tags="" position="1675,550" size="100,100">Years pass and as far as the perspective of your families well-being, you&#39;re doing okay. Your family remains in the same home since your daughter&#39;s birth. Likely to live
-there until the day you die. However, the health of the ocean remains uncertain. Experts still expect wildlife to continue to rapidly decline as long as the demand for fish 
-remain constant. You are barely able to support your family, surviving paycheck after paycheck.</tw-passagedata><tw-passagedata pid="14" name="Family State (Bad):" tags="" position="1450,600" size="100,100">A few months pass, and you are forced to sell your home and what little property you had to begin with. Surviving begins to become a struggle as you are forced to work quick
-on and off jobs. Practically being homeless, your wife along with your son leaves you struggling to survive, pondering the rest of your life. However, the aquatic wildlife remain
-somewhat stable. Marine biologists predict that fish populations will begin to decline in the upcoming decades.</tw-passagedata><tw-passagedata pid="15" name="First warning" tags="" position="1475,300" size="100,100">Okay, if you&#39;re concerned about the potential yield, we could always think about the next season. 
+aquatic wildlife and extreme levels of pollution across the Indian Ocean. At least you can retire soon!
 
-(set: $hasSaidNo to true)</tw-passagedata><tw-passagedata pid="16" name="Get fired" tags="" position="1275,500" size="100,100">Our supply is running low, and we need fish to keep up production. We can&#39;t just not fish for seasons! (if: $brokenNet is true) [ [[Boss net mald]] ]
+[[Go back to start|Introduction]] </tw-passagedata><tw-passagedata pid="12" name="Family State (Mid):" tags="" position="2150,625" size="100,100">Years pass and as far as the perspective of your families well-being, you&#39;re doing okay. Your family remains in the same home since your daughter&#39;s birth. Likely to live
+there until the day you die. However, the health of the ocean remains uncertain. Experts still expect wildlife to continue to rapidly decline as long as the demand for fish 
+remain constant. You are barely able to support your family, surviving paycheck after paycheck.
+
+[[Go back to start|Introduction]] </tw-passagedata><tw-passagedata pid="13" name="Family State (Bad):" tags="" position="1575,625" size="100,100">A few months pass, and you are forced to sell your home and what little property you had to begin with. Surviving begins to become a struggle as you are forced to work quick
+on and off jobs. Practically being homeless, your wife along with your son leaves you struggling to survive, pondering the rest of your life. However, the aquatic wildlife remain
+somewhat stable. Marine biologists predict that fish populations will begin to decline in the upcoming decades.
+
+[[Go back to start|Introduction]] </tw-passagedata><tw-passagedata pid="14" name="Get fired" tags="" position="1275,500" size="100,100">Our supply is running low, and we need fish to keep up production. We can&#39;t just not fish for seasons! (if: $brokenNet is true) [ [[Boss net mald]] ]
 I have dozens of other fishers just as capable as you are
 on hold for a job like this. I&#39;m afraid, if you are refusing to work, we can no longer have you work for us.
 
-[[Quit |Family State (Bad):]]</tw-passagedata><tw-passagedata pid="17" name="Event-1" tags="" position="1050,850" size="100,100">You set sail one very early morning. The freezing cold ocean air making every skin to metal contact point on the ship feel as numb and frigid as a corpse. The thick fog
+[[Quit |Family State (Bad):]]</tw-passagedata><tw-passagedata pid="15" name="Event-1" tags="" position="1050,850" size="100,100">You set sail one very early morning. The freezing cold ocean air making every skin to metal contact point on the ship feel as numb and frigid as a corpse. The thick fog
 clouding the shallow water, slowly increasing in thickness as the boat reaches closer and closer to the all too familiar fishing grounds.
 
 Do you choose to fish 
@@ -78,35 +85,39 @@ Do you choose to fish
 Traditional mass commercial net fishing that results in a large yield
 or
 [[Briefly trawl|Fish a little]] on the water :
-Dangle a net behind the boat, another commercial fishing method that yields fewer fish but is less likely to trap other unwanted species</tw-passagedata><tw-passagedata pid="18" name="Event-2a" tags="" position="1050,1050" size="100,100">In hot afternoon, the net feels heavier than you expected. You reel it in as hard as you can. After 5 minutes of reeling which feels like forever, you were able to haul in the goods.  You witness the mountain of fish you caught, even the boat almost lost its balance. You are beyond ecstatic.  You made 1500 dollars this fishing period
+Dangle a net behind the boat, another commercial fishing method that yields fewer fish but is less likely to trap other unwanted species</tw-passagedata><tw-passagedata pid="16" name="Event-2a" tags="" position="1050,1050" size="100,100">(set: $fishPopulation to it -3)
+(set: $money to it + 1500)
+(if:$fishPopulation &lt; -4)[ [[End fishing period|MASS EXTINCTION]] ]
+(else:) 
+[In hot afternoon, the net feels heavier than you expected. You reel it in as hard as you can. After 5 minutes of reeling which feels like forever, you were able to haul in the goods.  You witness the mountain of fish you caught, even the boat almost lost its balance. You are beyond ecstatic.  You made 1500 dollars this fishing period]
 
-[[End fishing period|Results2]]
-(set: $fishPopulation to it -3)
-(set: $money to it + 1500)</tw-passagedata><tw-passagedata pid="19" name="Event-3" tags="" position="2100,1300" size="100,100">Do you choose to fish 
+[[End fishing period|Results2]]]</tw-passagedata><tw-passagedata pid="17" name="Event-3" tags="" position="2100,1300" size="100,100">Do you choose to fish 
 [[Purse Seine|Child Event]] :
 Traditional mass commercial net fishing that results in a large yield
 or
-[[Briefly trawl|Child Event]] on the water :</tw-passagedata><tw-passagedata pid="20" name="Event-6" tags="" position="1150,2250" size="100,100">A new fishing season has arrived, and you go on your trip. While you are reeling in your net, suddenly it stopped pulling. Did it get stuck to a rock? Corals? You try moving it around bit it won&#39;t budge. After 30 minutes of tugging, the net is finally free. However, you realize that you didn&#39;t catch as much as you expected. Upon further inspection, you find a tear on the net and you have to replace it. You can&#39;t fish with a good net, so getting a new one  is your only choice. Maybe you should have been careful, or maybe it was already a loss and it doesn&#39;t make make a difference. Complaining doesn&#39;t bring you anywhere, so you decide to :
+[[Briefly trawl|Child Event]] on the water :</tw-passagedata><tw-passagedata pid="18" name="Event-6" tags="" position="1150,2250" size="100,100">A new fishing season has arrived, and you go on your trip. While you are reeling in your net, suddenly it stopped pulling. Did it get stuck to a rock? Corals? You try moving it around bit it won&#39;t budge. After 30 minutes of tugging, the net is finally free. However, you realize that you didn&#39;t catch as much as you expected. Upon further inspection, you find a tear on the net and you have to replace it. You can&#39;t fish with a good net, so getting a new one  is your only choice. Maybe you should have been careful, or maybe it was already a loss and it doesn&#39;t make make a difference. Complaining doesn&#39;t bring you anywhere, so you decide to :
 
 [[Buy a new one]] with your own money (around 300 dollars)
 [[Ask the company]] to replace it
 [[Use alternative means]] to get the money for replacement (bombs)
 
-You currently have $money dollars in savings</tw-passagedata><tw-passagedata pid="21" name="Event-8" tags="" position="1500,2900" size="100,100">While cleaning the ship your child runs up to you, you&#39;re tired beyond belief.  The photo trusted into your face, you see a photo of your glory days, you and your wife with your child as a baby.  You feel warmth for the first time in a while.</tw-passagedata><tw-passagedata pid="22" name="Event-9" tags="" position="1000,3100" size="100,100">A strange object shows up on your radar.
+You currently have $money dollars in savings</tw-passagedata><tw-passagedata pid="19" name="Event-8" tags="" position="1500,2900" size="100,100">While cleaning the ship your child runs up to you, you&#39;re tired beyond belief.  The photo trusted into your face, you see a photo of your glory days, you and your wife with your child as a baby.  You feel warmth for the first time in a while.</tw-passagedata><tw-passagedata pid="20" name="Event-9" tags="" position="1000,3100" size="100,100">A strange object shows up on your radar.
 You use your binoculars to get a better look and see something flashing. You suspect its someone stranded signaling you. Your area is not known for friendly people as everyone is just trying to survive. Sometimes by any means
 
 [[Rescue castaway]] and risk it
 
-[[Ignore the distraction and continue]]</tw-passagedata><tw-passagedata pid="23" name="Ending Check" tags="" position="1475,850" size="100,100">(if: $money &lt; 0) [ [[Family State (Bad):]] ]
-(if: $money &gt; 2000 and $fishPopulatiion &gt; 4) [ [[Family State (Good):]] ]
-(else:)[ [[Family State (Mid):]] ]</tw-passagedata><tw-passagedata pid="24" name="Save you son" tags="" position="2500,1400" size="100,100">You save your son, but lose a lot of money on the day. But does it really matter as long as he is safe? </tw-passagedata><tw-passagedata pid="25" name="Haul the net" tags="" position="2500,1200" size="100,100">You keep all the fish you caught, however you were too late to save your son. Your family mourns his death. However, you have to choice but to push forward</tw-passagedata><tw-passagedata pid="26" name="Turn around and return" tags="" position="1375,1525" size="100,100">You lose some money for the day, however you still have your boat. At least you can still continue on your job. 
+[[Ignore the distraction and continue]]</tw-passagedata><tw-passagedata pid="21" name="Ending Check" tags="" position="2000,1050" size="100,100">(if: $money &lt; 600) [ [[End|Family State (Bad):]] ]
+(else-if: $money &gt; 1300) [ [[End|Family State (Good):]] ]
+(else:)[ [[End|Family State (Mid):]] ]</tw-passagedata><tw-passagedata pid="22" name="Save you son" tags="" position="2500,1400" size="100,100">You save your son, but lose a lot of money on the day. But does it really matter as long as he is safe? </tw-passagedata><tw-passagedata pid="23" name="Haul the net" tags="" position="2500,1200" size="100,100">You keep all the fish you caught, however you were too late to save your son. Your family mourns his death. However, you have to choice but to push forward</tw-passagedata><tw-passagedata pid="24" name="Turn around and return" tags="" position="1450,1375" size="100,100">(if:$fishPopulation &lt; -4)[ [[End fishing period|MASS EXTINCTION]] ]
+(else:) 
+[You lost some money for the day, however you still have your boat. At least you can still continue on your job. 
 After repairs, you are left with $money dollars
-[[Result3]]</tw-passagedata><tw-passagedata pid="27" name="Take the risk and proceed onwards" tags="" position="1525,1750" size="100,100">You indeed have a successful day fishing for Trout, but the combination of the poor patchwork on your ship as well as the added weight of the Trout is too much for your ship, and you are forced to flee on a lifeboat before it sinks. 
+[[End fishing period|Result3]]]</tw-passagedata><tw-passagedata pid="25" name="Take the risk and proceed onwards" tags="" position="1525,1750" size="100,100">You indeed have a successful day fishing for Trout, but the combination of the poor patchwork on your ship as well as the added weight of the Trout is too much for your ship, and you are forced to flee on a lifeboat before it sinks. 
 
 Your boss is very dissapointed at you and you got fired 
-[[Quit|Family State (Bad):]]</tw-passagedata><tw-passagedata pid="28" name="Rescue castaway" tags="" position="1200,3200" size="100,100">You make your approach and bring the castaway onboard. They thank you and seem friendly, but are generally very quiet. Maybe they&#39;re traumatized?
+[[Quit|Family State (Bad):]]</tw-passagedata><tw-passagedata pid="26" name="Rescue castaway" tags="" position="1200,3200" size="100,100">You make your approach and bring the castaway onboard. They thank you and seem friendly, but are generally very quiet. Maybe they&#39;re traumatized?
 
-That night while you rest in your quarters you hear a sound. Upon investigation your fish have been dumped and the castaway is nowhere to be found. </tw-passagedata><tw-passagedata pid="29" name="Ignore the distraction and continue" tags="" position="1200,3000" size="100,100">You press on and continue fishing. The next time you pass by this area the flashing is gone.</tw-passagedata><tw-passagedata pid="30" name="Continue Job" tags="" position="300,1400" size="100,100">Months pass, and the fishing season is near. You receive a phone call and your boss would like to schedule a brief meeting. 
+That night while you rest in your quarters you hear a sound. Upon investigation your fish have been dumped and the castaway is nowhere to be found. </tw-passagedata><tw-passagedata pid="27" name="Ignore the distraction and continue" tags="" position="1200,3000" size="100,100">You press on and continue fishing. The next time you pass by this area the flashing is gone.</tw-passagedata><tw-passagedata pid="28" name="Continue Job" tags="" position="300,1400" size="100,100">Months pass, and the fishing season is near. You receive a phone call and your boss would like to schedule a brief meeting. 
 
 You have $money in your bank account
 
@@ -114,13 +125,12 @@ Would you like to fish this season?
 
 [[Yes |Job 2]]
 [[No]]
-</tw-passagedata><tw-passagedata pid="31" name="Results2" tags="" position="1400,1275" size="100,100">It is time to end the fishing period and wait for another one. 
-(set: $money to it - 600)
+</tw-passagedata><tw-passagedata pid="29" name="Results2" tags="" position="1350,1250" size="100,100">It is time to end the fishing period and wait for another one. 
+(set: $money to it - 450)
 (if: $money &lt; 0) [ [[Family State (Bad):]] ]
-
-After expenses costing 600 dollars, you are left with $money dollars in your bank account
-
-[[Next Period|Continue Job 2]]</tw-passagedata><tw-passagedata pid="32" name="Continue Job 2" tags="" position="825,1475" size="100,100">Months pass, and the fishing season is near. You receive a phone call and your boss would like to schedule a brief meeting. 
+(else:)
+[After expenses costing 450 dollars, you are left with $money dollars in your bank account
+[[Next Period|Continue Job 2]] ]</tw-passagedata><tw-passagedata pid="30" name="Continue Job 2" tags="" position="925,1475" size="100,100">Months pass, and the fishing season is near. You receive a phone call and your boss would like to schedule a brief meeting. 
 
 You have $money in your bank account
 
@@ -128,51 +138,55 @@ Would you like to fish this season?
 
 [[Yes |Job3]]
 [[No]]
-</tw-passagedata><tw-passagedata pid="33" name="Child Event" tags="" position="2300,1300" size="100,100">Dangle a net behind the boat, another commercial fishing method that yields fewer fish but is less likely to trap other unwanted species
+</tw-passagedata><tw-passagedata pid="31" name="Child Event" tags="" position="2300,1300" size="100,100">Dangle a net behind the boat, another commercial fishing method that yields fewer fish but is less likely to trap other unwanted species
 
 It’s take-your-child-to-work day, and you decide to take your child on one of your fishing trips to show him the ropes. However while showing him how to pull up a net of fish, he leans too far over the edge of the boat and falls into the sea. It is a rather wavy evening and he is struggling to stay afloat, but if you go to save him, you will lose your grip on the net and all the fish you caught throughout the day will be released back into the sea. 
 
 Will jump in to save your son right away, or try to haul in the net of fish first?
 
 [[Save you son]]
-[[Haul the net]]</tw-passagedata><tw-passagedata pid="34" name="Job 2" tags="" position="850,1125" size="100,100">Do you choose to fish 
+[[Haul the net]]</tw-passagedata><tw-passagedata pid="32" name="Job 2" tags="" position="850,1125" size="100,100">Do you choose to fish 
 [[Purse Seine|Event-2a]] :
 Traditional mass commercial net fishing that results in a large yield
 or
 [[Briefly trawl|Event-2b]] on the water :
-Dangle a net behind the boat, another commercial fishing method that yields fewer fish but is less likely to trap other unwanted species</tw-passagedata><tw-passagedata pid="35" name="Event-2b" tags="" position="1050,1225" size="100,100">In hot afternoon, the net feels heavier than you expected. You reel it in as hard as you can. After 5 minutes of reeling which feels like forever, you were able to haul in the goods. Its much more fish than you expected using this fishing technique. You made 450 dollars this fishing period
+Dangle a net behind the boat, another commercial fishing method that yields fewer fish but is less likely to trap other unwanted species</tw-passagedata><tw-passagedata pid="33" name="Event-2b" tags="" position="1050,1225" size="100,100">(set: $fishPopulation to it +2)
+(set: $money to it + 450)
+(if:$fishPopulation &lt; -4)[ [[End fishing period|MASS EXTINCTION]] ]
+(else:) 
+[In hot afternoon, the net feels heavier than you expected. You reel it in as hard as you can. After 5 minutes of reeling which feels like forever, you were able to haul in the goods. Its much more fish than you expected using this fishing technique. You made 450 dollars this fishing period
 
-[[End fishing period|Results2]]
-(set: $fishPopulation to it +2)
-(set: $money to it + 450)</tw-passagedata><tw-passagedata pid="36" name="Job3" tags="" position="825,1675" size="100,100">On a stormy spring morning, you are on the lookout on your boat for Trout to catch. The wind is howling, and you are drenched by the rain, but you can feel it in your bones: today is going to be a great day for Trout fishing.
+[[End fishing period|Results2]]]</tw-passagedata><tw-passagedata pid="34" name="Job3" tags="" position="825,1675" size="100,100">On a stormy spring morning, you are on the lookout on your boat for Trout to catch. The wind is howling, and you are drenched by the rain, but you can feel it in your bones: today is going to be a great day for Trout fishing.
 
 Do you choose to fish 
 [[Purse Seine|Event-4a]] :
 Traditional mass commercial net fishing that results in a large yield
 or
 [[Briefly trawl|Event-4b]] on the water :
-Dangle a net behind the boat, another commercial fishing method that yields fewer fish but is less likely to trap other unwanted species</tw-passagedata><tw-passagedata pid="37" name="Event-4a" tags="" position="1025,1575" size="100,100">Suddenly, your boat violently shakes as if it was struck, and sure enough, you notice that you just passed a cluster of rocks just barely below the surface. You rush down to check the hull of your ship and see that there are a few holes now exposed and water is leaking through. You look around for a patch kit, however all you can find is a single roll of duct tape. Left with no other choice, you tape up the holes in the hull, but you know this is just a temporary solution. 
+Dangle a net behind the boat, another commercial fishing method that yields fewer fish but is less likely to trap other unwanted species</tw-passagedata><tw-passagedata pid="35" name="Event-4a" tags="" position="1100,1500" size="100,100">(set: $money to it + 400)
+(set: $fishPopulation to it - 3)
+(if:$fishPopulation &lt; -4)[ [[End fishing period|MASS EXTINCTION]] ]
+(else:)
+[Suddenly, your boat violently shakes as if it was struck, and sure enough, you notice that you just passed a cluster of rocks just barely below the surface. You rush down to check the hull of your ship and see that there are a few holes now exposed and water is leaking through. You look around for a patch kit, however all you can find is a single roll of duct tape. Left with no other choice, you tape up the holes in the hull, but you know this is just a temporary solution. 
 
 What do you do next?
 
 [[Turn around and return]] to land to properly repair your boat.
-[[Take the risk and proceed onwards]] with your planned Trout fishing expedition.
-
-(set: $money to it + 400)
-(set: $fishPopulation to it - 3)</tw-passagedata><tw-passagedata pid="38" name="Event-4b" tags="" position="1025,1750" size="100,100">On a stormy spring morning, you are on the lookout on your boat for Trout to catch. The wind is howling, and you are drenched by the rain, but you can feel it in your bones: today is going to be a great day for Trout fishing. Suddenly, your boat violently shakes as if it was struck, and sure enough, you notice that you just passed a cluster of rocks just barely below the surface. You rush down to check the hull of your ship and see that there are a few holes now exposed and water is leaking through. You look around for a patch kit, however all you can find is a single roll of duct tape. Left with no other choice, you tape up the holes in the hull, but you know this is just a temporary solution. 
+[[Take the risk and proceed onwards]] with your planned Trout fishing expedition.]</tw-passagedata><tw-passagedata pid="36" name="Event-4b" tags="" position="1100,1750" size="100,100">(set: $money to it + 100)
+(set: $fishPopulation to it +2)
+(if:$fishPopulation &lt; -4)[ [[End fishing period|MASS EXTINCTION]] ]
+(else:) 
+[On a stormy spring morning, you are on the lookout on your boat for Trout to catch. The wind is howling, and you are drenched by the rain, but you can feel it in your bones: today is going to be a great day for Trout fishing. Suddenly, your boat violently shakes as if it was struck, and sure enough, you notice that you just passed a cluster of rocks just barely below the surface. You rush down to check the hull of your ship and see that there are a few holes now exposed and water is leaking through. You look around for a patch kit, however all you can find is a single roll of duct tape. Left with no other choice, you tape up the holes in the hull, but you know this is just a temporary solution. 
 
 What do you do next?
 
 [[Turn around and return]] to land to properly repair your boat.
-[[Take the risk and proceed onwards]] with your planned Trout fishing expedition.
-
-(set: $money to it + 100)
-(set: $fishPopulation to it +2)</tw-passagedata><tw-passagedata pid="39" name="Result3" tags="" position="1350,1925" size="100,100">It is time to end the fishing period and wait for another one. 
-(set: $money to it - 600)
+[[Take the risk and proceed onwards]] with your planned Trout fishing expedition.]</tw-passagedata><tw-passagedata pid="37" name="Result3" tags="" position="1275,1875" size="100,100">It is time to end the fishing period and wait for another one. 
+(set: $money to it - 450)
 (if: $money &lt; 0) [ [[Family State (Bad):]] ]
-After expenses costing 600 dollars, you are left with $money dollars in your bank account
-
-[[Next Period|Continue Job3]]</tw-passagedata><tw-passagedata pid="40" name="Continue Job3" tags="" position="700,1825" size="100,100">Months pass, and the fishing season is near. You receive a phone call and your boss would like to schedule a brief meeting. 
+(else:)
+[After expenses costing 450 dollars, you are left with $money dollars in your bank account
+[[Next Period|Continue Job3]]]</tw-passagedata><tw-passagedata pid="38" name="Continue Job3" tags="" position="750,1850" size="100,100">Months pass, and the fishing season is near. You receive a phone call and your boss would like to schedule a brief meeting. 
 
 You have $money in your bank account
 
@@ -180,45 +194,47 @@ Would you like to fish this season?
 
 [[Yes |Job4]]
 [[No]]
-</tw-passagedata><tw-passagedata pid="41" name="Job4" tags="" position="650,2075" size="100,100">The cold breeze hits your face. The sea seems to be very calm today.
+</tw-passagedata><tw-passagedata pid="39" name="Job4" tags="" position="650,2075" size="100,100">The cold breeze hits your face. The sea seems to be very calm today.
 
 Do you choose to fish 
 [[Purse Seine|Event-5a]] :
 Traditional mass commercial net fishing that results in a large yield
 or
 [[Briefly trawl|Event-5b]] on the water :
-Dangle a net behind the boat, another commercial fishing method that yields fewer fish but is less likely to trap other unwanted species</tw-passagedata><tw-passagedata pid="42" name="Event-5a" tags="" position="650,2250" size="100,100">Nothing happens, just a calm trip and then a calm way back. Your bad mood couldn&#39;t even ruin the trip. You made 1000 dollars on this trip
+Dangle a net behind the boat, another commercial fishing method that yields fewer fish but is less likely to trap other unwanted species</tw-passagedata><tw-passagedata pid="40" name="Event-5a" tags="" position="650,2250" size="100,100">(set: $money to it + 1000)
+(set: $fishPopulation to it - 3)
+(if:$fishPopulation &lt; -4)[ [[End fishing period|MASS EXTINCTION]] ]
+(else:) 
+[Nothing happens, just a calm trip and then a calm way back. Your bad mood couldn&#39;t even ruin the trip. You made 1000 dollars on this trip
 
-[[Results4]] 
+[[End fishing period|Results4]]]</tw-passagedata><tw-passagedata pid="41" name="Event-5b" tags="" position="875,2225" size="100,100">(set: $money to it + 250)
+(set: $fishPopulation to it +2)
+(if:$fishPopulation &lt; -4)[ [[End fishing period|MASS EXTINCTION]] ]
+(else:)
+[Nothing happens, just a calm trip and then a calm way back. Your bad mood couldn&#39;t even ruin the trip. You made 250 dollars on this trip
 
-(set: $money to it + 1000)
-(set: $fishPopulation to it - 3)</tw-passagedata><tw-passagedata pid="43" name="Event-5b" tags="" position="875,2225" size="100,100">Nothing happens, just a calm trip and then a calm way back. Your bad mood couldn&#39;t even ruin the trip. You made 250 dollars on this trip
-
-[[Results4]]
-
-(set: $money to it + 250)
-(set: $fishPopulation to it +2)</tw-passagedata><tw-passagedata pid="44" name="Results4" tags="" position="750,2450" size="100,100">It is time to end the fishing period and wait for another one. 
-(set: $money to it - 600)
+[[End fishing period|Results4]]]</tw-passagedata><tw-passagedata pid="42" name="Results4" tags="" position="750,2450" size="100,100">It is time to end the fishing period and wait for another one. 
+(set: $money to it - 450)
 (if: $money &lt; 0) [ [[Family State (Bad):]] ]
-After expenses costing 600 dollars, you are left with $money dollars in your bank account
-
-[[Next Period|Event-6]]</tw-passagedata><tw-passagedata pid="45" name="Buy a new one" tags="" position="1400,2100" size="100,100">You decided to buy a new one with your own money. There is not much time left, how do you want to fish?
+(else:)
+[After expenses costing 450 dollars, you are left with $money dollars in your bank account
+[[Next Period|Event-6]]]</tw-passagedata><tw-passagedata pid="43" name="Buy a new one" tags="" position="1400,2100" size="100,100">You decided to buy a new one with your own money. There is not much time left, how do you want to fish?
 
 Do you choose to fish 
 [[Purse Seine|Event-6a]] :
 Traditional mass commercial net fishing that results in a large yield
 or
 [[Briefly trawl|Event-6b]] on the water :
-Dangle a net behind the boat, another commercial fishing method that yields fewer fish but is less likely to trap other unwanted species</tw-passagedata><tw-passagedata pid="46" name="Ask the company" tags="" position="1400,2275" size="100,100">You decided on asking for a replacement. In front of the boss&#39; door, you ready yourself and knocked oon the door. The boos said that you could enter and you mustered up the courage to [[Ask]]
-(set: $brokenNet to true)</tw-passagedata><tw-passagedata pid="47" name="Use alternative means" tags="" position="1425,2425" size="100,100">In the end, you matter the most. If you don&#39;t survive then what&#39;s the point. You scour through your boat to find some explosives given by the company. It is quite a common practice in a lot of areas to get a high yield. Almost everybody is doing it... Right?
+Dangle a net behind the boat, another commercial fishing method that yields fewer fish but is less likely to trap other unwanted species</tw-passagedata><tw-passagedata pid="44" name="Ask the company" tags="" position="1400,2275" size="100,100">You decided on asking for a replacement. In front of the boss&#39; door, you ready yourself and knocked oon the door. The boos said that you could enter and you mustered up the courage to [[Ask]]
+(set: $brokenNet to true)</tw-passagedata><tw-passagedata pid="45" name="Use alternative means" tags="" position="1425,2425" size="100,100">In the end, you matter the most. If you don&#39;t survive then what&#39;s the point. You scour through your boat to find some explosives given by the company. It is quite a common practice in a lot of areas to get a high yield. Almost everybody is doing it... Right?
 
 *bang*
 
 fishes float to the surface. You easily collect them with whatever you have. You gained quite a lot of fish. With the net replacement, you gained 1000 dollars. 
 
 (set: $fishPopulation to it - 6)
-</tw-passagedata><tw-passagedata pid="48" name="Ask" tags="" position="1575,2175" size="100,100">(if: $hasSaidNo is true) [ [[Get fired]] ]
-(else:) [ [[Boss replace net]] ]</tw-passagedata><tw-passagedata pid="49" name="Boss net mald" tags="" position="1650,375" size="100,100">You incompitent pile of garbage, you even broke the net!</tw-passagedata><tw-passagedata pid="50" name="Boss replace net" tags="" position="1625,2325" size="100,100">You came back here just to tell me that?! You know what? Fine fine. I will forgive you this time so do not ever repeat it again you hear me? 
+</tw-passagedata><tw-passagedata pid="46" name="Ask" tags="" position="1575,2175" size="100,100">(if: $hasSaidNo is true) [ [[Get fired]] ]
+(else:) [ [[Boss replace net]] ]</tw-passagedata><tw-passagedata pid="47" name="Boss net mald" tags="" position="1650,375" size="100,100">You incompitent pile of garbage, you even broke the net!</tw-passagedata><tw-passagedata pid="48" name="Boss replace net" tags="" position="1625,2325" size="100,100">You came back here just to tell me that?! You know what? Fine fine. I will forgive you this time so do not ever repeat it again you hear me? 
 
 You could only nod.
 
@@ -231,20 +247,23 @@ or
 [[Briefly trawl|Event-6b]] on the water :
 Dangle a net behind the boat, another commercial fishing method that yields fewer fish but is less likely to trap other unwanted species
 
-</tw-passagedata><tw-passagedata pid="51" name="Event-6a" tags="" position="1925,2200" size="100,100">You tried your best to catch as many fish as you can. It&#39;s not as much as what you are used to, but it is what it is. 
+</tw-passagedata><tw-passagedata pid="49" name="Event-6a" tags="" position="1925,2200" size="100,100">You gained 800 on this trip (set: $money to it + 900)
+(set: $fishPopulation to it - 3)
+(if:$fishPopulation &lt; -4)[ [[End fishing period|MASS EXTINCTION]] ]
+(else:)
+[You tried your best to catch as many fish as you can. It&#39;s not as much as what you are used to, but it is what it is. 
 
-You gained 800 on this trip (set: $money to it + 800)
+[[Next fishing period|Results5]]]</tw-passagedata><tw-passagedata pid="50" name="Event-6b" tags="" position="1925,2375" size="100,100">You gained 200 on this trip (set: $money to it + 200)
+(set: $fishPopulation to it + 2)
+(if:$fishPopulation &lt; -4)[ [[End fishing period|MASS EXTINCTION]] ]
+(else:)
+[You tried your best to catch as many fish as you can. It&#39;s not as much as what you are used to, but it is what it is. 
 
-[[Next Period|Results5]]</tw-passagedata><tw-passagedata pid="52" name="Event-6b" tags="" position="1925,2375" size="100,100">You tried your best to catch as many fish as you can. It&#39;s not as much as what you are used to, but it is what it is. 
-
-You gained 200 on this trip (set: $money to it + 200)
-
-[[Next Period|Results5]]</tw-passagedata><tw-passagedata pid="53" name="Results5" tags="" position="2100,2400" size="100,100">It is time to end the fishing period and wait for another one. 
-(set: $money to it - 600)
+[[Next Period|Results5]]]</tw-passagedata><tw-passagedata pid="51" name="Results5" tags="" position="2100,2400" size="100,100">(set: $money to it - 450)
 (if: $money &lt; 0) [ [[Family State (Bad):]] ]
-After expenses costing 600 dollars, you are left with $money dollars in your bank account
-
-[[Next Period|Continue Job 5]]</tw-passagedata><tw-passagedata pid="54" name="Continue Job 5" tags="" position="1800,2600" size="100,100">Months pass, and the fishing season is near. You receive a phone call and your boss would like to schedule a brief meeting. 
+(else:)
+[After expenses costing 450 dollars, you are left with $money dollars in your bank account
+[[Next Period|Continue Job 5]]]</tw-passagedata><tw-passagedata pid="52" name="Continue Job 5" tags="" position="1750,2600" size="100,100">Months pass, and the fishing season is near. You receive a phone call and your boss would like to schedule a brief meeting. 
 
 You have $money in your bank account
 
@@ -252,30 +271,38 @@ Would you like to fish this season?
 
 [[Yes |Job5]]
 [[No]]
-</tw-passagedata><tw-passagedata pid="55" name="Job5" tags="" position="1800,2800" size="100,100">Do you choose to fish 
+</tw-passagedata><tw-passagedata pid="53" name="Job5" tags="" position="2000,2700" size="100,100">Do you choose to fish 
 [[Purse Seine|Event-7a]] :
 Traditional mass commercial net fishing that results in a large yield
 or
 [[Briefly trawl|Event-7b]] on the water :
-Dangle a net behind the boat, another commercial fishing method that yields fewer fish but is less likely to trap other unwanted species</tw-passagedata><tw-passagedata pid="56" name="Event-7a" tags="" position="1750,2950" size="100,100">While fishing on a summer night, you manage to catch an extremely rare fish! It fetches a high price on the market, so this fish alone might set you for the season. However, you also notice that this fish is an endangered species, and there are barely any sightings of it in your area. What will you do?
+Dangle a net behind the boat, another commercial fishing method that yields fewer fish but is less likely to trap other unwanted species</tw-passagedata><tw-passagedata pid="54" name="Event-7a" tags="" position="1650,2775" size="100,100">(set: $money to it + 1000)
+(set: $fishPopulation to it - 3)
+(if:$fishPopulation &lt; -4)[ [[End fishing period|MASS EXTINCTION]] ]
+(else:) 
+[While fishing on a summer night, you manage to catch an extremely rare fish! It fetches a high price on the market, so this fish alone might set you for the season. However, you also notice that this fish is an endangered species, and there are barely any sightings of it in your area. What will you do?
 
 [[Sell the fish]]
-[[Release the fish back into the sea]]
-
-(set: $money to it + 1000)
-(set: $fishPopulation to it - 3)</tw-passagedata><tw-passagedata pid="57" name="Event-7b" tags="" position="1950,2950" size="100,100">While fishing on a summer night, you manage to catch an extremely rare fish! It fetches a high price on the market, so this fish alone might set you for the season. However, you also notice that this fish is an endangered species, and there are barely any sightings of it in your area. What will you do?
+[[Release the fish back into the sea]]]</tw-passagedata><tw-passagedata pid="55" name="Event-7b" tags="" position="2025,3025" size="100,100">(set: $money to it + 250)
+(set: $fishPopulation to it + 2)
+(if:$fishPopulation &lt; -4)[ [[End fishing period|MASS EXTINCTION]] ]
+(else:) 
+[While fishing on a summer night, you manage to catch an extremely rare fish! It fetches a high price on the market, so this fish alone might set you for the season. However, you also notice that this fish is an endangered species, and there are barely any sightings of it in your area. What will you do?
 
 [[Sell the fish]]
-[[Release the fish back into the sea]]
+[[Release the fish back into the sea]]]
 
-(set: $money to it + 250)
-(set: $fishPopulation to it + 2)</tw-passagedata><tw-passagedata pid="58" name="Sell the fish" tags="" position="1750,3100" size="100,100">You sell the fish for $250,000. You can now retire early and live a happy life
-[ [[Future]] ]</tw-passagedata><tw-passagedata pid="59" name="Release the fish back into the sea" tags="" position="1950,3100" size="100,100">Due to it being endangered, you elect to release it back into the wild, while also tagging it as an endangered species for preservation. While you make no extra money this season, it is about preservation and making sure the future kids could still see it by directly. 
+</tw-passagedata><tw-passagedata pid="56" name="Sell the fish" tags="" position="1725,3050" size="100,100">You sell the fish for $250,000. You can now retire early and live a happy life
+[ [[Future]] ]</tw-passagedata><tw-passagedata pid="57" name="Release the fish back into the sea" tags="" position="2200,2825" size="100,100">Due to it being endangered, you elect to release it back into the wild, while also tagging it as an endangered species for preservation. While you make no extra money this season, it is about preservation and making sure the future kids could still see it by directly. 
+(set: $money to it -600)
+After expenses, You end the fishing period with $money in your account
 
-You end the fishing period with $money in your account</tw-passagedata><tw-passagedata pid="60" name="Future" tags="" position="1750,3300" size="100,100">Years pass and as far as the perspective of your families well-being, you are doing great! Your daughter is now fortunate enough to seek a good education, and you and your wives relationship
+[[End fishing period|Ending Check]] </tw-passagedata><tw-passagedata pid="58" name="Future" tags="" position="1825,3275" size="100,100">Years pass and as far as the perspective of your families well-being, you are doing great! Your daughter is now fortunate enough to seek a good education, and you and your wives relationship
 remains stable and happy! However, due to overfishing primarily ones funded by big food corporations have led to the inevitable death of coral reefs, the extinction of numerous 
 aquatic wildlife and extreme levels of pollution across the Indian Ocean. At least you can retire soon!
-You found out that the species you sold was one of the last of its kind, and now the species has gone extinct</tw-passagedata></tw-storydata>
+You found out that the species you sold was one of the last of its kind, and now the species has gone extinct
+
+[[Go back to start|Introduction]] </tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
